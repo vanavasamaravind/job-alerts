@@ -16,7 +16,7 @@ from datetime import datetime, timedelta, timezone
 from email.mime.text import MIMEText
 from pathlib import Path
 
-from config import SEARCH_QUERIES, COUNTRY, DATE_POSTED, WINDOW_HOURS
+from config import SEARCH_QUERIES, COUNTRY, DATE_POSTED, WINDOW_HOURS, JOB_REQUIREMENTS
 
 BASE_DIR = Path(__file__).resolve().parent
 ENV_PATH = BASE_DIR / ".env"
@@ -42,6 +42,7 @@ def fetch_jobs(query, api_key):
         "num_pages": "1",
         "date_posted": DATE_POSTED,
         "country": COUNTRY,
+        "job_requirements": JOB_REQUIREMENTS,
     }
     url = f"{JSEARCH_URL}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={
