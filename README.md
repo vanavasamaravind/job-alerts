@@ -1,4 +1,4 @@
-# Daily Job Alert Bot
+i am aravuind# Daily Job Alert Bot
 
 Fetches job postings via the JSearch API (RapidAPI) and emails the ones posted
 since the last run. Runs twice a day (morning + evening) via a scheduled
